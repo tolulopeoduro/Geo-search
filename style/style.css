@@ -1,0 +1,53 @@
+*{
+    margin: 0px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+header{
+    color: white;
+    background-color: gray;
+    height: 60px;
+}
+
+form {
+    margin: 20px;
+    border: 1px solid black;
+    width: 250px;
+    height: 30px;
+}
+
+
+
+#search-button {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    height: 28px;
+    margin-top: 1px;
+}
+
+#search-box {
+    border : 0px solid green;
+    width: 207px;
+    outline: none;
+}
+
+#temperature {
+    font-size: 100px;
+    margin-left: 20px;
+}
+
+#temperature-buttons {
+    margin-left: 40px;
+}
+
+.temperature-button {
+    border: 0px solid black;
+    height: 40px;
+    width: 80px;
+}
+
