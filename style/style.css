@@ -36,9 +36,12 @@ form {
     outline: none;
 }
 
+#weather-and-temperature{
+    margin-left: 30px;
+}
+
 #temperature {
-    font-size: 100px;
-    margin-left: 20px;
+    font-size: 32px;
 }
 
 #temperature-buttons {
@@ -49,5 +52,10 @@ form {
     border: 0px solid black;
     height: 40px;
     width: 80px;
+}
+
+.map {
+    height: 600px;
+    width: 600px;
 }
 
