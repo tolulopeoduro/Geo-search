@@ -7,10 +7,19 @@ const fahrenheitButton = document.getElementsByClassName("fahrenheit")[0]
 const map = document.getElementById("map");
 let temperature;
 let weather;
+const loadingText = document.getElementById("loading");
+const form = document.getElementById("form");
+loadingText.style.display="none"
 
-
-async function getWeather(){
-    const weatherPromise = fetch("https://api.openweathermap.org/data/2.5/weather?q=Lagos&APPID=6ac97c1171313045147d80a613cc0f50&units=metric" ).then(Response => Response.json())
+async function getWeather(cityName){
+    const weatherPromise = fetch("https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&APPID=6ac97c1171313045147d80a613cc0f50&units=metric" )
+    .then(Response => {if(Response.status === 200) {
+        return Response.json();
+    } else {
+        map.style.display = "none";
+        loadingText.textContent = "City not found";
+        loadingText.style.display = "inline";
+    }})
     const weatherResponse = await weatherPromise;
     console.log(weatherResponse)
     temperature = weatherResponse.main.temp
@@ -20,12 +29,27 @@ async function getWeather(){
     celsiusButton.disabled = true;
 }
 
-async function getMap(){
-    const mapPromise = fetch("https://www.mapquestapi.com/staticmap/v5/map?key=HF9cGYphwRAwc5OxQAGH0FeGkJ3JtN4o&center=New+York,NY&size=@2x").then(Response=>Response.blob())
+async function getMap(cityName){
+    map.style.display = "none"
+    loadingText.textContent = "Map is Loading"
+    loadingText.style.display = "inherit"
+    const mapPromise = fetch("https://www.mapquestapi.com/staticmap/v5/map?key=HF9cGYphwRAwc5OxQAGH0FeGkJ3JtN4o&center="+cityName+"&size=800,600&scalebar=true")
+    .then(Response=>Response.blob())
     const mapResponse = await mapPromise;
     let imgUrl = URL.createObjectURL(mapResponse)
+    loadingText.style.display = "none"
     map.src = imgUrl;
+    map.style.display = "inherit"
+        if (loadingText.innerText === "City not found") {
+            map.style.display = "none"
+        }
+
 }
+
+const logError =()=>{
+    console.log("error")
+}
+
 
 const setToFahrenheit =()=>{
     temperature *=1.8;
@@ -44,8 +68,16 @@ const setToCelsius=()=>{
     fahrenheitButton.disabled = false;
 }
 
+const getResults = () => {
+    getWeather(searchInput.value);
+    
+    getMap(searchInput.value);
+}
 
-
+form.onsubmit = (e)=>{
+    e.preventDefault()
+    searchInput.value? getResults():null;
+}
 
 celsiusButton.addEventListener('click' , ()=>{
     setToCelsius()

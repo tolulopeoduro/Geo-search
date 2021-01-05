@@ -4,7 +4,7 @@
 
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 header{
@@ -54,8 +54,11 @@ form {
     width: 80px;
 }
 
-.map {
-    height: 600px;
-    width: 600px;
+#map {
+    margin-top: 50px;
 }
 
+#loading {
+    margin-left: 300px;
+    font-size: x-large;
+}
