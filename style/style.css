@@ -2,9 +2,13 @@
     margin: 0px;
 }
 
+body{
+    width: 100vw;
+}
+
 main {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
 }
 
 header{
@@ -55,10 +59,11 @@ form {
 }
 
 #map {
-    margin-top: 50px;
+    margin: 0px auto;
+    height: 300px;
+    width: 300px;
 }
 
 #loading {
-    margin-left: 300px;
     font-size: x-large;
 }
