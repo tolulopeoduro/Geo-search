@@ -1,69 +1,79 @@
-*{
-    margin: 0px;
-}
-
-body{
-    width: 100vw;
+* {
+  margin: 0px;
 }
 
 main {
-    display: grid;
-    grid-template-rows: 1fr 2fr;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
 }
 
-header{
-    color: white;
-    background-color: gray;
-    height: 60px;
+header {
+  color: white;
+  background-color: gray;
+  height: 60px;
 }
 
 form {
-    margin: 20px;
-    border: 1px solid black;
-    width: 250px;
-    height: 30px;
+  margin: 20px;
+  border: 1px solid black;
+  width: 250px;
+  height: 30px;
 }
 
-
-
 #search-button {
-    background-color: black;
-    color: white;
-    border: 1px solid black;
-    height: 28px;
-    margin-top: 1px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  height: 28px;
+  margin-top: 1px;
 }
 
 #search-box {
-    border : 0px solid green;
-    width: 207px;
-    outline: none;
+  border: 0px solid green;
+  width: 207px;
+  outline: none;
 }
 
-#weather-and-temperature{
-    margin-left: 30px;
+#weather-and-temperature {
+  margin-left: 30px;
 }
 
 #temperature {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 #temperature-buttons {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
 .temperature-button {
-    border: 0px solid black;
-    height: 40px;
-    width: 80px;
+  border: 0px solid black;
+  height: 40px;
+  width: 80px;
 }
 
 #map {
-    margin: 0px auto;
-    height: 300px;
-    width: 300px;
+  width: 300px;
+  height: 300px;
 }
 
 #loading {
-    font-size: x-large;
+  font-size: x-large;
 }
+
+@media only screen and (min-width: 760px) {
+  body{
+    height:auto;
+  }
+  main{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  #map {
+    width: 800px;
+    height: 500px;
+  }
+}
+
+

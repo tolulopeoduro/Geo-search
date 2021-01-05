@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href = "./style/style.css" type="text/css" rel="stylesheet">
-        <title>Geo-Search</title>
-    </head>
-    <body>
-        <header>
-            <h1>Geo-Search</h1>
-        </header>
-        <main>
-            <div id ="search-and-info">
-                <form id="form">
-                    <input id = "search-box" type="text" placeholder="search city eg. Lagos"/>
-                    <button id = "search-button" type = "submit">Go</button>
-                </form>
-                
-                <div id="weather-and-temperature">
-                    <span id="weather"></span><br/>
-                    <span id = "temperature"></span>
-                </div>
-                <div id = "temperature-buttons">
-                    <button class="temperature-button celsius">&#8451;</button>
-                    <button class="temperature-button fahrenheit">&#x2109;</button>
-                </div>
-            </div>
-            <div>
-                <img id = "map" src=""/>
-                <span id ="loading">Map is Loading...</span>
-            </div>
-        </main>
-        <script src = "./script/script.js"></script>
-    </body>
+  <head>
+    <link href="./style/style.css" type="text/css" rel="stylesheet" />
+    <title>Geo-Search</title>
+  </head>
+  <body>
+    <header>
+      <h1>Geo-Search</h1>
+    </header>
+    <main>
+      <div id="search-and-info">
+        <form id="form">
+          <input
+            id="search-box"
+            type="text"
+            placeholder="search city eg. Lagos"
+          />
+          <button id="search-button" type="submit">Go</button>
+        </form>
+
+        <div id="weather-and-temperature">
+          <span id="weather"></span><br />
+          <span id="temperature"></span>
+        </div>
+        <div id="temperature-buttons">
+          <button class="temperature-button celsius">&#8451;</button>
+          <button class="temperature-button fahrenheit">&#x2109;</button>
+        </div>
+      </div>
+      <div>
+        <div id="map"></div>
+        <span id="loading">Map is Loading...</span>
+      </div>
+    </main>
+    <script src="./script/script.js"></script>
+  </body>
 </html>
