@@ -51,8 +51,8 @@ async function getMap(cityName) {
   const mapResponse = await mapPromise;
   let imgUrl = URL.createObjectURL(mapResponse);
   loadingText.style.display = "none";
-  map.innerHTML = `<img id="map" src="${imgUrl}"/>`;
-  map.style.display = "inline";
+  map.src = imgUrl;
+  map.style.display = "block";
   if (loadingText.innerText === "City not found") {
     map.style.display = "none";
   }

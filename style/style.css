@@ -157,11 +157,8 @@
     margin : 0px;
   }
 
-  main {
-=======
 @media only screen and (min-width: 768px) {
   main{
->>>>>>> 2b4e5275b3720e4dc2c755ac27f438523ca12f30
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
@@ -224,9 +221,9 @@
 
   #map {
     height: 500px;
-    width: 600px;
-    border: 1px solid black;
-    margin: 20px 0px 0px 5px;
+    width: 500px;
+    margin: 20px 0px 0px 120px;
+
   }
 
 } 
