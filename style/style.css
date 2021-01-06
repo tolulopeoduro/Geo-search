@@ -1,77 +1,233 @@
-* {
-  margin: 0px;
+#header {
+  background-color: darkgoldenrod;
 }
 
-main {
-  display: grid;
-  grid-template-rows: 1fr 2fr;
-}
+@media only screen and (min-width: 320px){
+  *{
+    margin : 0px;
+  }
 
-header {
-  color: white;
-  background-color: gray;
-  height: 60px;
-}
+  body {
+  }
 
-form {
-  margin: 20px;
-  border: 1px solid black;
-  width: 250px;
-  height: 30px;
-}
+  #header {
+    font-size: 1.5rem ;
+    background-color: darkgoldenrod;
+    margin-bottom: 10px;
+  }
 
-#search-button {
-  background-color: black;
-  color: white;
-  border: 1px solid black;
-  height: 28px;
-  margin-top: 1px;
-}
+  #search-box {
+    outline: none;
+    border: 0px solid black;
+    height: 30px;
+  }
 
-#search-box {
-  border: 0px solid green;
-  width: 207px;
-  outline: none;
-}
+  #search-button{
+    border: 1px solid darkgoldenrod;
+    background-color: darkgoldenrod;
+    height: 30px;
+  }
 
-#weather-and-temperature {
-  margin-left: 30px;
-}
+  #search-button:hover{
+    background-color: rgba(184, 134, 11, 0.5);
+    
+  }
 
-#temperature {
-  font-size: 32px;
-}
+  .temperature-button {
+    border: 1px solid darkgoldenrod;
+    background-color: darkgoldenrod;
+    color: white;
+  }
 
-#temperature-buttons {
-  margin-left: 40px;
-}
+  #weather , #temperature{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-left: 20px;
+  }
 
-.temperature-button {
-  border: 0px solid black;
-  height: 40px;
-  width: 80px;
-}
+  #temperature {
+    font-size: 1.3rem;
+  }
 
-#map {
-  width: 300px;
-  height: 300px;
-}
+  #form {
+    border: 1px solid black;
+    width: 209px;
+    height: auto;
+    margin-bottom: 10px;
+  }
 
-#loading {
-  font-size: x-large;
-}
 
-@media only screen and (min-width: 768px) {
-  main{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    height: 100vh;
+<<<<<<< HEAD
+
+  #weather-report{
+    font-size: 1.5rem;
+    margin-top: 30px;
+    border-bottom: 1px solid darkgoldenrod;
   }
 
   #map {
-    width: 800px;
-    height: 500px;
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    margin: 20px 0px 0px 5px;
   }
-}
 
+} 
+
+
+
+@media only screen and (min-width: 760px){
+  *{
+    margin : 0px;
+  }
+
+  body {
+  }
+
+  #header {
+    font-size: 3rem ;
+    background-color: darkgoldenrod;
+    margin-bottom: 10px;
+  }
+
+  #search-box {
+    outline: none;
+    border: 0px solid black;
+    font-size: 2em;
+    width: 400px;
+    height: 60px;
+  }
+
+  #search-button{
+    border: 1px solid darkgoldenrod;
+    background-color: darkgoldenrod;
+    width: 60px;
+    font-size: 2em;
+    height: 60px;
+  }
+
+  #search-button:hover{
+    background-color: rgba(184, 134, 11, 0.5);
+    
+  }
+
+  .temperature-button {
+    border: 1px solid darkgoldenrod;
+    height: 60px;
+    width: 60px;
+    border-radius: 3px;
+    background-color: darkgoldenrod;
+    color: white;
+  }
+
+  #weather , #temperature{
+    font-size: 3rem;
+    text-transform: capitalize;
+    margin-left: 20px;
+  }
+
+  #temperature {
+    font-size: 2.6rem;
+  }
+
+  #form {
+    border: 1px solid black;
+    width: 469px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  #weather-report{
+    font-size: 3rem;
+    margin-top: 30px;
+    border-bottom: 1px solid darkgoldenrod;
+  }
+
+  #map {
+    height: 600px;
+    width: 600px;
+    border: 1px solid black;
+    margin: 20px 0px 0px 5px;
+  }
+
+} 
+
+@media only screen and (min-width: 1024px){
+  *{
+    margin : 0px;
+  }
+
+  main {
+=======
+@media only screen and (min-width: 768px) {
+  main{
+>>>>>>> 2b4e5275b3720e4dc2c755ac27f438523ca12f30
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  #header {
+    font-size: 1.5rem ;
+    background-color: darkgoldenrod;
+    margin-bottom: 10px;
+  }
+
+  #search-box {
+    outline: none;
+    border: 0px solid black;
+    font-size : 2em;
+    height: 60px;
+  }
+
+  #search-button{
+    border: 1px solid darkgoldenrod;
+    background-color: darkgoldenrod;
+    width: 60px;
+    height: 60px;
+  }
+
+  #search-button:hover{
+    background-color: rgba(184, 134, 11, 0.5);
+    
+  }
+
+  .temperature-button {
+    border: 1px solid darkgoldenrod;
+    background-color: darkgoldenrod;
+    color: white;
+  }
+
+  #weather , #temperature{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-left: 20px;
+  }
+
+  #temperature {
+    font-size: 1.3rem;
+  }
+
+  #form {
+    border: 1px solid black;
+    width: 469px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  
+
+  #weather-report{
+    font-size: 1.5rem;
+    margin-top: 30px;
+    border-bottom: 1px solid darkgoldenrod;
+  }
+
+  #map {
+    height: 500px;
+    width: 600px;
+    border: 1px solid black;
+    margin: 20px 0px 0px 5px;
+  }
+
+} 
 
