@@ -62,12 +62,10 @@ form {
 }
 
 @media only screen and (min-width: 760px) {
-  body{
-    height:auto;
-  }
   main{
     display: grid;
     grid-template-columns: 1fr 2fr;
+    height: 100vh;
   }
 
   #map {
