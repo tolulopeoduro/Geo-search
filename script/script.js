@@ -75,7 +75,7 @@ function getMap(cityName){
     }
   }
   request.send()
-  map.onload =()=>{map.style.display = "block" ; loadingText.style.display = "none"}
+  map.style.display = "block" ; loadingText.style.display = "none"
   if (loadingText.innerText === "City not found") {
     map.style.display = "none";
   }
