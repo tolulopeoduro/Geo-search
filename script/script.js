@@ -35,7 +35,7 @@ async function getWeather(cityName) {
   celsiusButton.disabled = true;
 }
 
-async function getMap(cityName) {
+/*async function getMap(cityName) {
   map.style.display = "none";
   loadingText.textContent = "Map is Loading";
   loadingText.style.display = "inherit";
@@ -53,6 +53,29 @@ async function getMap(cityName) {
   loadingText.style.display = "none";
   map.src = imgUrl;
   map.style.display = "block";
+  if (loadingText.innerText === "City not found") {
+    map.style.display = "none";
+  }
+}*/
+
+
+function getMap(cityName){
+  map.style.display = "none";
+  loadingText.textContent = "Map is Loading";
+  loadingText.style.display = "block";
+  let request = new XMLHttpRequest();
+  request.open("GET" , "https://www.mapquestapi.com/staticmap/v5/map?locations=Lagos&size="+mapDetails.width+","+mapDetails.height+"@2x&key=HF9cGYphwRAwc5OxQAGH0FeGkJ3JtN4o&banner")
+  request.onreadystatechange=()=>{
+    if(request.readyState=== 4) {
+      if (request.status === 200 || request.status === 201) {
+        map.src = "https://www.mapquestapi.com/staticmap/v5/map?locations="+cityName+"&size=600,400@2x&key=HF9cGYphwRAwc5OxQAGH0FeGkJ3JtN4o&banner"
+      } else {
+        console.log("error")
+      }
+    }
+  }
+  request.send()
+  map.onload =()=>{map.style.display = "block" ; loadingText.style.display = "none"}
   if (loadingText.innerText === "City not found") {
     map.style.display = "none";
   }
